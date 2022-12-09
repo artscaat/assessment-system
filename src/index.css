@@ -1,0 +1,401 @@
+@import url('/src/fonts/thsarabunnew.css');
+
+*{
+  font-family: 'THSarabunNew', sans-serif;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+.HeadTextShcool,.HeadTextLogin,.HeadTextRegis,.HeadTextMain{
+  text-align: center;
+  font-size: 32px;
+}
+.HeadTextNameStu{
+  font-size: 18px;
+  font-weight: bold;
+}
+.logoLogin{
+  width:150px;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.containerSidebar{
+  width: 300px;
+  height: 100vh;
+  background-color: #000;
+}
+
+.sidebar {
+  flex: 1;
+  height: 170vh;
+  background-color: #F2F2F7;
+  position: sticky;
+  top: 50px;
+  
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  margin-top: 1px;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebarListItem {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: rgb(240, 240, 255);
+}
+
+.sidebarIcon{
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+
+.link{
+  text-decoration: none;
+  color: #555;
+}
+
+
+.containerTextTitleSidebar{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logoSidebar{
+  width: 120px;
+}
+
+.imgSidebar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerPageLogin{
+    margin-top: 100px;
+   
+}
+.containerLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.topbar{
+  width:100%;
+  height: 80px;
+  background-color: #F2F2F7;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topbarWraper{
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TextNavMain{
+
+  font-weight: bold;
+  font-size: 20px;
+  color: darkblue;
+  cursor: pointer;
+}
+
+.topLeft{
+  display: flex;
+  align-items: center;
+}
+
+.topRight{
+  display: flex;
+  align-items: center;
+}
+
+.topbarBtnContainer{
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #555;
+}
+.btnLogout{
+  padding:10px 14px ;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff0f1;
+  color: #d95087;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+}
+
+.btnLogout:hover{
+  -webkit-box-shadow: 0px 0px 15px -10px #000000; 
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+
+
+
+.btnHome{
+  padding:10px 14px ;
+  border: none;
+  border-radius: 10px;
+  background-color: #ebf1fe;
+  color: #2a7ade;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+  margin-right: 10px;
+}
+
+.btnHome:hover{
+  -webkit-box-shadow: 0px 0px 15px -10px #000000; 
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+
+.btnDisabledHome{
+  padding:10px 14px ;
+  border: none;
+  border-radius: 10px;
+  background-color: #b8b8b8;
+  color: #818181;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+  margin-right: 10px;
+}
+
+.btnSeeSubj{
+  padding:10px 14px ;
+  border: none;
+  border-radius: 10px;
+  background-color: #e0f2f1;
+  color:#26a69a;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+  margin-right: 10px;
+}
+
+.btnSeeSubj:hover{
+  -webkit-box-shadow: 0px 0px 15px -10px #000000; 
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+
+.NameUse{
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.NameUses{
+  display: flex;
+  flex-direction: column;
+}
+
+.containerMainPage{
+  display: flex;
+}
+
+.cotainerDetail{
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+footer{
+  background: #F2F2F7;
+  height: 20%;
+  width: 100%;
+  font-family: "Open Sans";
+  color: #00008B;
+  bottom:0;
+  left: 0;
+  right: 0;
+
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3{
+  font-size: 24px;
+  text-transform:capitalize;
+}
+
+.footer-content p{
+  font-size :16px;
+}
+
+.userListEdit{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px ;
+  color: white;
+  background-color: #3bb077;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: ease-in 0.3s;
+}
+.userListEdit:hover{
+  
+background-color: #A6B69B;
+  
+}
+.userListDelete{
+  color: red;
+  cursor: pointer;
+}
+.userListPrint{
+  cursor: pointer;
+  color: #000;
+  
+}
+.userListDate , .userListComment{
+  cursor: pointer;
+}
+
+.userListStatus{
+ color: green;
+}
+.userListDate{
+  color: rgb(228, 214, 23);
+}
+
+.ContainerInputSubject{
+  display: flex;
+}
+
+.ContainerTableSubject{
+  display: flex;
+  margin-top: 20px;
+ 
+}
+.subject{
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.containerBtnAddEdu{
+  display: flex;
+}
+.containerBtnBack{
+  margin-left: auto;
+}
+
+.containerBack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TextHeadSum {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.containerBtnResults{
+  display: flex;
+}
+caption{
+  color: #000;
+}
+
+.containerBtnStudyResults{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerCommentStu{
+  background-color: rgb(207, 207, 207);
+  width:250px;
+}
+.ContainerTableStudy ,.ContainerTableS2{
+  display: flex;
+  justify-content: center;
+}
+.ContainerTable1 ,.ContainerTable2{
+  margin: 0px 100px;
+  
+}
+.TextTabless2 ,.HeadTextPrint{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.ContainerTabless2{
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  margin: 5px 0px;
+  padding: 0px 10px;
+}
+@media print {
+  .print-source {
+    /* margin: 10px 0px; */
+    display: block;
+    font-size: 14px;
+    line-height: 0.6cm;
+    background-color: #fff;   
+    scale: 98%;
+  }
+  .pagebreak { 
+    margin-top: 300px;
+    padding: 0px 0px;
+    page-break-before: always; 
+    
+  }  
+}
+
+.PictureAsPdf{
+  color: rgb(10, 65, 230);
+}
+
+.signature{
+  width:100px
+}
+.imgPerson{
+  width:100px
+}
+

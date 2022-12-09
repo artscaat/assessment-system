@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "root",
+    "password": "XG7vbEXE9HAf5J95",
+    "database": "measurement_evaluatedb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false,
+    "_comment": "logging: false //ปิด Executing (default)" 
+  },
+  "test": {
+    "username": "root",
+    "password": "XG7vbEXE9HAf5J95",
+    "database": "measurement_evaluatedb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "username": "root",
+    "password": "XG7vbEXE9HAf5J95",
+    "database": "measurement_evaluatedb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  }
+}
