@@ -405,50 +405,65 @@ class PersAttrScoreManagement {
     }
 
     /*----------------------------- getInstructorData -----------------------*/
-    async getInstructorData() {
+    async getInstructorData(courId) {
         let condition = {
             attributes: [
                 'PersId',
                 'Rank',
                 'PersFname',
-                'PersLname'
+                'PersLname',
+                // 'ProcessCenter',
+                // 'Director',
+                // 'Professor',
+                // 'Student',
+                // 'EvaluationCenter',
+                // 'Process',
+                // 'Evaluation',
+                // 'Administrative'
             ],
-            include: [{
-                model: models.tbaccessrights,
-                attributes: [
-                    'ProcessCenter',
-                    'Director',
-                    'Professor',
-                    'Student',
-                    'EvaluationCenter',
-                    'Process',
-                    'Evaluation',
-                    'Administrative'
-                ],
-                association: new HasMany(models.tbaccessrights, {
-                    foreignKey: {
-                        name: 'AccessRightsId',
-                        allowNull: false
-                    }
-                }),
-                required: true,
-                on: {
-                    'AccessRightsId': { [Op.eq]: sequelize.col('tbaccessrights.AccessRightsId') },
-                }
-            }],
-            //where: {}
+            // include: [{
+            //     model: models.tbaccessrights,
+            //     attributes: [
+            //         'ProcessCenter',
+            //         'Director',
+            //         'Professor',
+            //         'Student',
+            //         'EvaluationCenter',
+            //         'Process',
+            //         'Evaluation',
+            //         'Administrative'
+            //     ],
+            //     association: new HasMany(models.tbinstructor,models.tbaccessrights, {
+            //         foreignKey: {
+            //             name: 'AccessRightsId',
+            //             allowNull: false
+            //         }
+            //     }),
+            //     required: true,
+            //     on: {
+            //         'AccessRightsId': { [Op.eq]: sequelize.col('tbaccessrights.AccessRightsId') },
+            //     }
+            // }],
+            where: {
+                [Op.and]:[
+                    {'Professor': 1},
+                    {'AccessRightsId': courId},
+                    // {'CourseGrp': classno}
+                ]
+            }
         };
         let instrdata = await models.tbaccessrights.findAll(condition);
         /*------------------- End of Database Query ------------------------------*/
 
         let obj = JSON.parse(JSON.stringify(instrdata));
+        // console.log("data: ",obj)
         let instrdatalist = Object.keys(obj).map((key) => {
             //console.log(key, obj[key]);
             let instrdata = {};
             instrdata['instr_id'] = obj[key].PersId;
             instrdata['instr_name'] = obj[key].Rank + " " + obj[key].PersFname + " " + obj[key].PersLname;
-            let i = 0;
-            instrdata['instr_rights'] = { "accessrights": Object.values(obj[key].tbaccessrights).map((item) => { return (Object.values(item)); }).at(i++) };
+            // let i = 0;
+            // instrdata['instr_rights'] = { "accessrights": Object.values(obj[key].tbaccessrights).map((item) => { return (Object.values(item)); }).at(i++) };
             return instrdata;
         });
         return (instrdatalist);

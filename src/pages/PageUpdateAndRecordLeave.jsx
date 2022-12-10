@@ -110,8 +110,9 @@ class PageUpdateAndRecordLeave extends Component {
   }
 
   createIntructorList = async () => {
+    const courIds = localStorage.getItem('AccessRights')
     let res_instrlist = await axios.get(
-      process.env.REACT_APP_API + '/PageUpdateAndRecordLeave/instructor',
+      process.env.REACT_APP_API + `/PageUpdateAndRecordLeave/instructor/${courIds}`,
     )
     let instr_indx = res_instrlist.data
       .map((e) => {

@@ -40,7 +40,7 @@ export default function AddPersonalAttributes() {
   })
 
   const checkDuplicate = () => { 
-    console.log("data: ",Duplicate)
+    // console.log("data: ",Duplicate)
     if(Duplicate.length === 0){
       setOpen(true);
     }else{

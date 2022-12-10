@@ -330,7 +330,7 @@ export default function PageManage() {
             AccessRightsId: AccessRightsId,
             checked: checked,
           }
-          console.log('value จนท: ', value)
+          // console.log('value จนท: ', value)
 
           Axios.put(process.env.REACT_APP_API + `/AcctStatus`, value)
             .then((res) => {

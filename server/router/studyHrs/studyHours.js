@@ -398,7 +398,7 @@ class StudyHoursManagement extends PersAttrScoreManagement {
 
     deleteFileInFolder = (fname) => {
         const m_path = __dirname.substring(0, __dirname.search('server'));
-        const f_path = path.join(m_path + process.env.API_PATH + "server", fname);
+        const f_path = path.join(m_path + "/server", fname);
         // console.log("m_path :", m_path);
         // console.log("f_path :", f_path);
         fs.unlink(f_path, (err) => {

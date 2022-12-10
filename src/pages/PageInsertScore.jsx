@@ -223,7 +223,7 @@ class PageInsertScore extends Component {
 
       /*---------------- updated on 23.09.2022 ---------------*/
       let props_sem = this.props.location.state.seminar === '0' ? '0' : this.props.location.state.seminar;
-      console.log("data props_sem: ", props_sem)
+      // console.log("data props_sem: ", props_sem)
 
       this.setState({
         selcoursegrp: this.props.location.state.coursegrp,

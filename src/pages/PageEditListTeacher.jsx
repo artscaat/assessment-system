@@ -133,14 +133,14 @@ export default function PageEditHistory() {
     PersLname,
     PersCurrPosition,
     PersAffiliation,
-    SignatureImg,
+    // SignatureImg,
     email,
-    Director,
+    // Director,
   } = user
   const navigate = useNavigate()
   const [confirm, setComfirm] = useState(false)
 
-  const [ImgSignature, setImgSignature] = useState([])
+  // const [ImgSignature, setImgSignature] = useState([])
   const userlogin = localStorage.getItem('PersonalHistory')
   var delayInMilliseconds = 3000
   const CourseId = localStorage.getItem('AccessRights').substring(11, 14)
@@ -172,6 +172,7 @@ export default function PageEditHistory() {
 
   useEffect(() => {
     getData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const editTeacher = () => {

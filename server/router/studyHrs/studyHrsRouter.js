@@ -26,7 +26,7 @@ router
         res.send(await studyhours.handleIndvBehaveScore(req.body));
     })
 
-    .put('/recordleavedata', async (req, res) => {
+    // .put('/recordleavedata', async (req, res) => {
         
-    })
+    // })
 module.exports = router;

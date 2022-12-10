@@ -489,7 +489,7 @@ if(typeof req.file !== "undefined" && ImgSignatureTest === "NoSignature"){
 )
 
 app.put(
-  '/PageHistory/:AccessRightsId',
+  process.env.API_PATH + 'PageHistory/:AccessRightsId',
   uploadSignature.single('file'),
   (req, res) => {
     try {
@@ -1112,12 +1112,14 @@ app.post(process.env.API_PATH + 'RegisTeac', (req, res) => {
             persaffiliation,
             email,
           ],
+          (err, result) => {
+            if (err) {
+              console.log(err)
+            } else {
+              res.send('Values inserted')
+            }
+          },
         )
-        if (err) {
-          console.log(err)
-        } else {
-          res.send('Values inserted')
-        }
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
@@ -1172,20 +1174,20 @@ app.get(process.env.API_PATH + 'FetchAccessRightsId', (req, res) => {
   }
 })
 
-app.get(process.env.API_PATH + 'FetchEmailRegister', (req, res) => {
-  try {
-    db.query(`SELECT email FROM tbregister `, (err, result) => {
-      if (err) {
-        console.log(err)
-      } else {
-        res.send(result)
-        // console.log(result);
-      }
-    })
-  } catch (error) {
-    res.status(500).json({ error: error.message })
-  }
-})
+// app.get(process.env.API_PATH + 'FetchEmailRegister', (req, res) => {
+//   try {
+//     db.query(`SELECT email FROM tbregister `, (err, result) => {
+//       if (err) {
+//         console.log(err)
+//       } else {
+//         res.send(result)
+//         // console.log(result);
+//       }
+//     })
+//   } catch (error) {
+//     res.status(500).json({ error: error.message })
+//   }
+// })
 
 app.get(process.env.API_PATH + 'FetchCourseYear', (req, res) => {
   try {

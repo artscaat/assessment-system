@@ -16,7 +16,7 @@ export default function PageEditEducationInfo() {
   const location = useLocation()
   const navigate = useNavigate()
   const { eduinfo } = location.state
-  console.log('eduinfo edit ', eduinfo)
+  // console.log('eduinfo edit ', eduinfo)
   const id = eduinfo.id
   const [file, setFile] = useState('')
   const [CourseYear, setCourseyear] = useState('')

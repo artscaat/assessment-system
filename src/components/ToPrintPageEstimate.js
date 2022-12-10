@@ -77,7 +77,7 @@ const ComponentToPrint = forwardRef((props, ref) => {
 
     const selectGradeForEachCourse = () => {
         switch (dataToPrint.dataToPrint.subject.split('-')[0]) {
-            case '051': //หลักสูตรนายทหารชั้นผู้บังคับหมวด 
+            case '041': //หลักสูตรนายทหารชั้นผู้บังคับหมวด 
                 setSelGrade(gradegrptype[0]);
                 break;
             case '073': //หลักสูตรครูการบินเพื่อฝึกศิษย์การบิน

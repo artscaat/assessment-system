@@ -388,9 +388,10 @@ export default function PageEstimate() {
   };
 
   /*------------------------- Events : handleSeminarSelect ---------------------*/
-  const handleSeminarSelect = (evt) => {
+  const handleSeminarSelect = (evt, child) => {
     // console.log('handleSeminarSelect >>> ', evt.target.value);
-    setSeminar(evt.target.value);
+    const arr = Object.values(child)[4].children.split(' ');
+    setSeminar(evt.target.value === 0 ? 0 : parseInt(arr[1]),);
     //setSeminar(grpSemList.seminarlist[evt.target.value].split(' ')[1]);
     setFullScore(0);
     setIndvScoreList([]);

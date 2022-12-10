@@ -40,8 +40,9 @@ router
         res.send(dropdown);
     })
 
-    .get('/instructor', async (req, res) => {
-        let instrlist = await studyhours.getInstructorData();
+    .get('/instructor/:courId', async (req, res) => {
+        const courId = req.params.courId;
+        let instrlist = await studyhours.getInstructorData(courId);
         res.send(instrlist);
     })
 

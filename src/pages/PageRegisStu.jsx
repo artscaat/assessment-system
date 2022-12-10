@@ -364,7 +364,7 @@ export default function PageRegisStu() {
       
     ) {
       setAlerts(true);
-      toast.error("กรุณากรอกข้อมูลให้เรียบร้อยเรียบร้อย");
+      toast.error("กรุณากรอกข้อมูลให้เรียบร้อย");
     }
     else if(  email.search("@") > 0 ){
       setAlerts(true);
